@@ -49,31 +49,31 @@ if (have_posts()) {
 									switch ($entity) {
 								        case 'pages':
 								            wp_list_pages(array('title_li' => false));
-								            continue 1;
+								            break;
 								        case 'categories':
 								            wp_list_categories(array('show_count' => true, 'use_desc_for_title' => false, 'title_li' => false));
-								            continue 1;
+								            break;
 								        case 'authors':
 								            wp_list_authors(array('exclude_admin' => false, 'optioncount' => true, 'title_li' => false));
-								            continue 1;
+								            break;
 								        case 'years':
 								            wp_get_archives(array('type' => 'yearly', 'show_post_count' => true));
-								            continue 1;
+								            break;
 								        case 'months':
 									        wp_get_archives(array('type' => 'monthly', 'show_post_count' => true));
-									        continue 1;
+									        break;
 								        case 'weeks':
 									        wp_get_archives(array('type' => 'weekly', 'show_post_count' => true));
-									        continue 1;
+									        break;
 								        case 'days':
 									        wp_get_archives(array('type' => 'daily', 'show_post_count' => true));
-									        continue;
+									        break;
 								        case 'tag-cloud':
 								            wp_tag_cloud(array('number' => 0));
-								            continue 1;
+								            break;
 								        case 'posts':
 									        wp_get_archives(array('type' => 'postbypost'));
-									        continue 1;
+									        break;
 									}
 
 								?>
